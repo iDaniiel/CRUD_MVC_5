@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Aplicacion_ASP_MVC.Models.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ape_Paterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APe_Materno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ape_Paterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APe_Materno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Pk_Empleado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Pk_Empleado }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Pk_Empleado })
+        </td>
+    </tr>
+}
+
+</table>
