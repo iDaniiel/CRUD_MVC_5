@@ -1,0 +1,58 @@
+﻿@model Aplicacion_ASP_MVC.Models.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ape_Paterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ape_Paterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APe_Materno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APe_Materno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Pk_Empleado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
